@@ -1,10 +1,13 @@
 # start with python
 
-## Python 101
+![Untitled](start%20with%20python%20703d85a89b2f4ce1ade71a5b07380b3b/Untitled.png)
 
 > Python is a cross-platform programming language, which means it runs on
 all the major operating systems
 > 
+
+# Fundamentals:
+
 - **1. Comments:**
     
     It is ignored by the compiler in running the code.
@@ -132,3 +135,18 @@ all the major operating systems
     result = 10
     result = result - 5
     ```
+    
+
+---
+
+> The Python community’s philosophy is contained in “The Zen of Python” by Tim Peters. You can access this brief set of principles for writing good Python code by entering
+import this into your interpreter.
+> 
+
+```python
+import this into
+```
+
+![https://www.skillbill.it/uploads/bxphpjcu1xv41.png](https://www.skillbill.it/uploads/bxphpjcu1xv41.png)
+
+![Untitled](start%20with%20python%20703d85a89b2f4ce1ade71a5b07380b3b/Untitled%201.png)
