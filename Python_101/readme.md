@@ -1,6 +1,6 @@
 # start with python
 
-## Python 101
+# Python 101
 
 > Python is a cross-platform programming language, which means it runs on
 all the major operating systems
