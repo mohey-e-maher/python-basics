@@ -102,3 +102,33 @@ all the major operating systems
     print(message)
     ```
     
+- **3. inputs & outputs:**
+    
+    we use these 2 functions to interact with the user:
+    
+    ```python
+    #to scan from the user:
+    Name=input("Enter you name:")
+    #to print to the user terminal:
+    print(f"my name is {Name}")
+    ```
+    
+- **4. Arithmetic Operators:**
+    
+    **Arithmetic Operators** You can perform various arithmetic operations using the following syntax
+    
+    ```python
+    summation = 2 + 5 #7
+    sub = 4 - 10 #-6
+    Multiplication = 2 * 8 #16
+    Division = 6 / 3 #2
+    Modulus = 10 % 3 #1
+    exponents = 3 ** 3 #27
+    
+    #Shortened Form :
+    result -= 5
+    #instead of : 
+    
+    result = 10
+    result = result - 5
+    ```
