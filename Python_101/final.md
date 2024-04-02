@@ -136,6 +136,98 @@ all the major operating systems
     result = result - 5
     ```
     
+- **5. Advanced Datatype:**
+    
+    we here show the advanced datatypes : (Lists -  tuples - string) 
+    
+    ### 1. Lists
+    
+    it’s a **collection of data** and it maybe consist of **same / different data type** and it able to change anytime
+    
+    ```python
+    names =['Mohey', 'Maher', 'Ali','Nasr']
+    dump = ['mega',20,169.2,19,True]
+    ```
+    
+     we could access any element from the list by detect **the index** of the element and we could change it 
+    
+    ```python
+    names =['Mohey', 'Maher', 'Ali','Nasr']
+    print(names)
+    names[0] = 'Memo'
+    print(names)
+    # ['Memo', 'Maher', 'Ali','Nasr']
+    ```
+    
+    to add new element to the List { **append(element)** } / { **insert( index , element)** }
+    
+    ```python
+    names =['Mohey', 'Maher', 'Ali','Nasr']
+    print(names)
+    names.append(2020)
+    # ['Mohey', 'Maher', 'Ali','Nasr',2020]
+    names.insert(0,'Ana')
+    # ['Ana','Mohey', 'Maher', 'Ali','Nasr',2020]
+    ```
+    
+    to remove element from list { **remove(element)** } / { **clear()** }
+    
+    ```python
+    names =['Mohey', 'Maher', 'Ali','Nasr']
+    names.remove('Mohey')
+    print(names)
+    # ['Maher', 'Ali','Nasr']
+    names.clear()
+    print(names)
+    # []
+    ```
+    
+    ### 2. Tuples
+    
+    one of the advanced data type but it’s suitable for creating unchangeable list (couldn’t edit / remove \ append )
+    
+    ```python
+    student1 = ('Ahemed',18,170.3,True)
+    print(student1[0])
+    # we could create a tuple without the bracities
+    student1 = 'Ahemed',18,170.3,True
+    ```
+    
+    ### 3. Dictionaries
+    
+    it’s a way to save a collection of data in form of (key , value) which make the access of the data more easier than the index way
+    
+     
+    
+    ```python
+    student_one  = {'Name': 'Ahmed','birthcity':'Giza','birthdate':'19-3-2003'}
+    # to select an element by the key 
+    student_one['Name']
+    #>> Ahemd
+    
+    # to select all elements in dictionary 
+    print(student_one.values())
+    # {'Ahmed','Giza','19-3-2003'}
+    
+    # to know what's the keys of the dictionary
+    print(student_one.keys())
+    # 'Name','birthcity','birthdate'
+    ```
+    
+- **6. if statements**
+    
+    to create **conditions or instructions** on the code to verify the right condition and it runs the correct (True) condition
+    
+    ```python
+    age = input("Enter your age :")
+    if age >=18:
+    	print("able to Enter the program")
+    elif age <10:
+    	print("anta men ya 3am")
+    else:
+    	print("sorry for you, not able to Enter")
+    ```
+    
 
 ---
 
