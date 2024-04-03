@@ -214,7 +214,7 @@ all the major operating systems
     # 'Name','birthcity','birthdate'
     ```
     
-- **6. if statements**
+- **6. if statements:**
     
     to create **conditions or instructions** on the code to verify the right condition and it runs the correct (True) condition
     
@@ -226,6 +226,54 @@ all the major operating systems
     	print("anta men ya 3am")
     else:
     	print("sorry for you, not able to Enter")
+    ```
+    
+- **7. Loops:**
+    
+    to make iterations on detect part of code for n number of times
+    
+    ### while loop
+    
+    ```python
+    # while loop
+    i=1
+    while i<=5:
+    	print(i)
+    	i += 1 
+    ```
+    
+    ### for loop & for loop with range() function
+    
+    ```python
+    std = ["mohey","mo","ali","Bob"]
+    for i in std:
+    	print(std[i])
+    #-------------------------------------
+    for i in range(1,10,2 >>steps):
+    	print(i)
+    # will print from 1 to 9
+    ```
+    
+- **8. Functions:**
+    
+    collect some of programming instructions in one collected body and it run after calling the function and could take parameters as input and return with values
+    
+    ```python
+    def sum(x,y):
+    	return x+y;
+    	
+    # to call the function
+    z = sum(2,3)
+    
+    ```
+    
+    we could make the function take more that 1 parameter
+    
+    ```python
+    def equa(x,y,z):
+    	return (x*y)+z
+    	
+    result = equa(2,5,8)
     ```
     
 
