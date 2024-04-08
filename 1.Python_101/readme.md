@@ -105,6 +105,7 @@ all the major operating systems
     print(message)
     ```
     
+    
 - **3. inputs & outputs:**
     
     we use these 2 functions to interact with the user:
@@ -242,3 +243,5 @@ import this into
 ![https://www.skillbill.it/uploads/bxphpjcu1xv41.png](https://www.skillbill.it/uploads/bxphpjcu1xv41.png)
 
 ![Untitled](start%20with%20python%20703d85a89b2f4ce1ade71a5b07380b3b/Untitled%201.png)
+
+# resoureces:
