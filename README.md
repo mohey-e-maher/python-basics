@@ -3,10 +3,12 @@
 </p>
   <h1 align = "center">python Basics</h1>
 
-# this's my personal repo. to collect all the online resources that i learned from and i will learn ISA!
-# and i will take it to 3 refrences 
+### this's my personal repo. to collect all the online resources that i learned from and I will learn ISA!
+
+and I will take 3 references: 
 
 - **▶️ Youtube**
+
 [Data Analysis with Python Course](https://www.youtube.com/playlist?list=PLWKjhJtqVAblvI1i46ScbKV2jH1gdL7VQ)
 
 [Python Arabic Community playlist](https://www.youtube.com/playlist?list=PLUQDw_ve-LUAKfUt9BbYuva4Ix0kz8Yqz)
