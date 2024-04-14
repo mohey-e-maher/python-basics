@@ -1,6 +1,6 @@
-# start with python
+<h1 align="center">start with python</h1>
 
-![Untitled](start%20with%20python%20703d85a89b2f4ce1ade71a5b07380b3b/Untitled.png)
+![Untitled](../_media/Untitled.png)
 
 > Python is a cross-platform programming language, which means it runs on
 all the major operating systems
@@ -140,16 +140,16 @@ all the major operating systems
     
     we here show the advanced datatypes : (Lists -  tuples - string) 
     
-    ### 1. Lists
+    # 1. Lists
     
-    it’s a **collection of data** and it maybe consist of **same / different data type** and it able to change anytime
+    it’s a **collection of data** and it may consist of **same/different data types** and it able to change anytime
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
     dump = ['mega',20,169.2,19,True]
     ```
     
-     we could access any element from the list by detect **the index** of the element and we could change it 
+     we could access any element from the list by detecting **the index** of the element and we could change it 
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
@@ -182,9 +182,31 @@ all the major operating systems
     # []
     ```
     
-    ### 2. Tuples
+    We could do list comprehensions”
     
-    one of the advanced data type but it’s suitable for creating unchangeable list (couldn’t edit / remove \ append )
+    ```python
+    # this code add new list and change the value of it
+    nums = [0, 1, 2, 3, 4]
+    squares = []
+    for x in nums:
+        squares.append(x ** 2)
+    print(squares)
+    # it could be written simply like this 
+    nums =[0,1,2,3,4]
+    squares = [x**2 for x in nums]
+    print(squares)
+    ```
+    
+    **List comprehensions can also contain conditions:**
+    
+    ```python
+    nums = [0,1,2,3,4,5]
+    even = [x **2 for x in nums if x%2==0]
+    ```
+    
+    # 2. Tuples
+    
+    one of the advanced data type but it’s suitable for creating **unchangeable list** (couldn’t edit/remove/append )
     
     ```python
     student1 = ('Ahemed',18,170.3,True)
@@ -193,11 +215,9 @@ all the major operating systems
     student1 = 'Ahemed',18,170.3,True
     ```
     
-    ### 3. Dictionaries
+    # 3. Dictionaries
     
-    it’s a way to save a collection of data in form of (key , value) which make the access of the data more easier than the index way
-    
-     
+    it’s a way to save a collection of data in the form of (key , value) which makes the access to the data easier than the index way
     
     ```python
     student_one  = {'Name': 'Ahmed','birthcity':'Giza','birthdate':'19-3-2003'}
@@ -212,6 +232,61 @@ all the major operating systems
     # to know what's the keys of the dictionary
     print(student_one.keys())
     # 'Name','birthcity','birthdate'
+    ```
+    
+    - **Set an entry in a dictionary**
+    
+    ```python
+    dic['mohey'] = 'Good'
+    print(dic['moehy']) # Good
+    print(dic)
+    # {'cat': 'cute', 'dog': 'furry', 'fish': 'wet'}
+    ```
+    
+    - **we check if the key exists in the dictionary or not**
+    
+    ```python
+    print(dic.get('money','Not exist'))
+    # will return 'Not exist' because the value not in the dictionary
+    print(dic.get('mohey','Empty'))
+    # Good
+    ```
+    
+    - **to remove an element from the dictionary:**
+    
+    ```python
+    del dic['mohey']
+    ```
+    
+    - **to iterate in a dictionary**
+    
+    ```python
+    for key,value in dic.items():
+    	print(f'{key} is {value}')
+    # cat is cute
+    # dog is furry
+    # fish is we
+    ```
+    
+    - **we could create a dictionary of sub-dictionaries and add to it:**
+    
+     
+    
+    ```
+    # Dictionary of dictionaries
+    europe = { 'spain': { 'capital':'madrid', 'population':46.77 },
+               'france': { 'capital':'paris', 'population':66.03 },
+               'germany': { 'capital':'berlin', 'population':80.62 },
+               'norway': { 'capital':'oslo', 'population':5.084 } }
+    
+    # Print out the capital of France
+    print(europe['france']['capital'])
+    
+    # Create sub-dictionary data
+    data = { 'capital':'rome', 'population':59.83}
+    
+    # Add data to europe under key 'italy'
+    europe['italy']=data
     ```
     
 - **6. if statements:**
@@ -254,6 +329,70 @@ all the major operating systems
     # will print from 1 to 9
     ```
     
+    - **we could show the index in for loop by using {enumerate}**
+    
+    ```python
+    fam = [1.73, 1.68, 1.71, 1.89]
+    for index, height in enumerate(fam) :
+    print(f"index {index} : {height}")
+    ```
+    
+    - Do **for loop** on **Array** to print 2 columns
+    
+    ```python
+    # house list of lists
+    house = [["hallway", 11.25], 
+             ["kitchen", 18.0], 
+             ["living room", 20.0], 
+             ["bedroom", 10.75], 
+             ["bathroom", 9.50]]
+             
+    # Build a for loop from scratch
+    for x in house:
+        print(f"the {x[0]} is {x[1]} sqm")
+    ```
+    
+    - For Loop on **Dictionary**
+    
+    ```python
+    world = { "afghanistan":30.55,
+    					"albania":2.77,
+    					"algeria":39.21 }
+    #the method items give us the key and the value in 2 variables 
+    
+    for key, value in world.items() :
+    	print(f"{key} -- {value}")
+    ```
+    
+    - to print 2D array in 1D array:
+    
+    we use nditer() function
+    
+    ```python
+    # For loop over np_baseball
+    for x in np.nditer(np_baseball):
+        print(x)
+    ```
+    
+    - to print the rows of Data Frame with the key or index:
+    
+    ```python
+    import pandas as pd
+    brics = pd.read_csv("brics.csv", index_col = 0)
+    for lab, row in brics.iterrows():
+    print(lab)
+    print(row)
+    ```
+    
+    - to print the rows of pandas coulmn
+    
+    ```python
+    import pandas as pd
+    brics = pd.read_csv("brics.csv", index_col = 0)
+    for lab, row in brics.iterrows():
+    print(lab + ": " + row["capital"])
+    ```
+    
 - **8. Functions:**
     
     collect some of programming instructions in one collected body and it run after calling the function and could take parameters as input and return with values
@@ -276,6 +415,33 @@ all the major operating systems
     result = equa(2,5,8)
     ```
     
+- **9.Classes**
+    
+    The syntax for defining classes in Python is straightforward:
+    
+    ```python
+    # initialize class 
+    Class animals:
+    	#Constructor
+    	def __init__(self,name):
+    		self.name = name
+    # Instance method
+    	def greet(self, loud = False):
+    		if loud:
+    			print('HELLO, {}'.format(self.name.upper()))
+    		else:
+    			print('Hello, {}!'.format(self.name))
+    
+    # (Not sure) create object from the class
+    F_name = animals('Mohey')
+    
+    # call the instance method 
+    F_name.greet()
+    # Mohey
+    F_name.greet(loud = True)
+    # MOHEY
+    ```
+    
 
 ---
 
@@ -289,4 +455,10 @@ import this into
 
 ![https://www.skillbill.it/uploads/bxphpjcu1xv41.png](https://www.skillbill.it/uploads/bxphpjcu1xv41.png)
 
-![Untitled](start%20with%20python%20703d85a89b2f4ce1ade71a5b07380b3b/Untitled%201.png)
+![Untitled](../_media/Untitled%201.png)
+
+---
+
+In the end we have to say 
+
+![41f05b9a516c6bb1d42a75e1eba940dc.webp](https://i0.wp.com/islamphotos.net/wp-content/uploads/2018/10/41f05b9a516c6bb1d42a75e1eba940dc.png?fit=914%2C608)
