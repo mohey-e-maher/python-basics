@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="https://datascientest.com/en/wp-content/uploads/sites/9/2023/03/illu_numpy_blog-125.png" />
+</p>
 <h1 align="center">NumPy</h1>
 
 > NumPy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. If you are already familiar with MATLAB, you might find this [tutorial](http://wiki.scipy.org/NumPy_for_Matlab_Users) useful to get started with Numpy.
