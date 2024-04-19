@@ -27,6 +27,8 @@ and I will take 3 references:
 
 - **📀 courses**
 
+[ITI - Python Basics 3 days Course +full BI track](https://mega.nz/folder/kp5RFACR#tEcE-S38Bfkjim7gBp4e9Q)
+
 [DataCamp - Introduction to Python ](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science)
 
 [DataCamp - Intermediate Python](https://app.datacamp.com/learn/courses/intermediate-python)
