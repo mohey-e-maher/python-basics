@@ -2,7 +2,7 @@
 
 ![Untitled](../_media/Untitled.png)
 
-> Python is a cross-platform programming language, which means it runs on
+Python is a cross-platform programming language, which means it runs on
 all the major operating systems
 > 
 
@@ -35,7 +35,7 @@ all the major operating systems
     
     # Strings
     
-    > Anything inside quotes is considered a string in Python
+    > Anything inside quotes is considered a string in Python, **it’s consider immutable**
     > 
     
     ```python
@@ -92,7 +92,7 @@ all the major operating systems
     #
     ```
     
-    Avoiding Type Errors with the str() Function
+    - **Avoiding Type Errors with the str() Function**
     Often, you’ll want to use a variable’s value within a message. For example,
     say you want to wish someone a happy birthday. You might write code
     like this:
@@ -136,20 +136,29 @@ all the major operating systems
     result = result - 5
     ```
     
-- **5. Advanced Datatype:**
+- **5. Advanced Datatype (Data Structure):**
     
     we here show the advanced datatypes : (Lists -  tuples - string) 
     
     # 1. Lists
     
-    it’s a **collection of data** and it may consist of **same/different data types** and it able to change anytime
+    it’s a **collection of data** and it may consist of **same/different data types** 
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
     dump = ['mega',20,169.2,19,True]
     ```
     
-     we could access any element from the list by detecting **the index** of the element and we could change it 
+    - **it able to change anytime (Mutable)**
+    
+    ```python
+    name =['A','H','M','E','D']
+    # We could change the index 
+    name[2] ='MM'
+    
+    ```
+    
+    - **we could access any element from the list by detecting the index of the element and we could change it**
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
@@ -159,7 +168,7 @@ all the major operating systems
     # ['Memo', 'Maher', 'Ali','Nasr']
     ```
     
-    to add new element to the List { **append(element)** } / { **insert( index , element)** }
+    - to add new element to the List { **append(element)** } / { **insert( index , element)** }
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
@@ -170,7 +179,7 @@ all the major operating systems
     # ['Ana','Mohey', 'Maher', 'Ali','Nasr',2020]
     ```
     
-    to remove element from list { **remove(element)** } / { **clear()** }
+    - to remove element from list { **remove(element)** } / { **clear()** }
     
     ```python
     names =['Mohey', 'Maher', 'Ali','Nasr']
@@ -182,7 +191,7 @@ all the major operating systems
     # []
     ```
     
-    We could do list comprehensions”
+    - We could do list comprehensions
     
     ```python
     # this code add new list and change the value of it
@@ -197,16 +206,39 @@ all the major operating systems
     print(squares)
     ```
     
-    **List comprehensions can also contain conditions:**
+    - **List comprehensions can also contain conditions:**
     
     ```python
     nums = [0,1,2,3,4,5]
     even = [x **2 for x in nums if x%2==0]
     ```
     
+    - we could make reference to the same list
+    
+    ```python
+    L1 =['Mohey', 'Maher', 'Ali','Nasr']
+    L2 = L1
+    L2[1] = 'Mega'
+    # this will make L2 pointer at the address of the list
+    print(L2)
+    # ['Mohey', 'Maher', 'Mega','Nasr']
+    print(L2)
+    # ['Mohey', 'Maher', 'Mega','Nasr']
+    ```
+    
+    - **to copy list in another list**
+    
+    ```python
+    L1 =['Mohey', 'Maher', 'Ali','Nasr']
+    
+    L2 = L1[:]
+    print(L2)
+    # ['Mohey', 'Maher', 'Ali','Nasr']
+    ```
+    
     # 2. Tuples
     
-    one of the advanced data type but it’s suitable for creating **unchangeable list** (couldn’t edit/remove/append )
+    one of the advanced data types but it’s suitable for creating an **unchangeable list** (couldn’t edit/remove/append ) [ Immutable ]
     
     ```python
     student1 = ('Ahemed',18,170.3,True)
@@ -215,15 +247,23 @@ all the major operating systems
     student1 = 'Ahemed',18,170.3,True
     ```
     
+    - it’s used when we need to put variables unchangeable
+    
+    ### it’s preferable:
+    
+    - we use Tuples in **Heterogenous**
+    - and we use the list of **Homogenous**
+    
     # 3. Dictionaries
     
     it’s a way to save a collection of data in the form of (key , value) which makes the access to the data easier than the index way
     
     ```python
     student_one  = {'Name': 'Ahmed','birthcity':'Giza','birthdate':'19-3-2003'}
+    
     # to select an element by the key 
     student_one['Name']
-    #>> Ahemd
+    #>> Ahmed
     
     # to select all elements in dictionary 
     print(student_one.values())
@@ -256,6 +296,8 @@ all the major operating systems
     
     ```python
     del dic['mohey']
+    
+    del(dic['mohey'])
     ```
     
     - **to iterate in a dictionary**
@@ -269,8 +311,6 @@ all the major operating systems
     ```
     
     - **we could create a dictionary of sub-dictionaries and add to it:**
-    
-     
     
     ```
     # Dictionary of dictionaries
@@ -289,6 +329,29 @@ all the major operating systems
     europe['italy']=data
     ```
     
+    - to search about value in dictionary
+    
+    ```python
+    if "Ahmed" in my_dict.values():
+    ```
+    
+    - check if there’s a key without any Errors
+    
+    ```python
+    print(my_dict.get("myname","NULL"))
+    # This method will handle the error if the key not exist 
+    # and will print "NULL"
+    ```
+    
+    - to add new dictionary as new elements in old one
+    
+    ```python
+    # put the new dictionary as new elements in the old dictionary (my_dict)
+    my_dict.update(
+    	{"key1":"value1","key2":"value2"}
+    )
+    ```
+    
 - **6. if statements:**
     
     to create **conditions or instructions** on the code to verify the right condition and it runs the correct (True) condition
@@ -301,6 +364,18 @@ all the major operating systems
     	print("anta men ya 3am")
     else:
     	print("sorry for you, not able to Enter")
+    ```
+    
+    - short-hand if
+    
+    ```python
+    if degree <65:
+    	grade = "fair"
+    else:
+    	grade = "good"
+    
+     # we could make short-hand of it 
+     grade = "fair" if degree <65 else "good"
     ```
     
 - **7. Loops:**
@@ -393,6 +468,20 @@ all the major operating systems
     print(lab + ": " + row["capital"])
     ```
     
+    - **Else of for Loop**
+        - if the for loop ended without { Break } else statement will run
+    
+    ```python
+    my_list =[1,5,7,9,8,10]
+    for I in my_list:
+    	if I % 3 ==0:
+    		print("found")
+    		found = True
+    		break
+    else:
+    	print("Not found")
+    ```
+    
 - **8. Functions:**
     
     collect some of programming instructions in one collected body and it run after calling the function and could take parameters as input and return with values
@@ -406,7 +495,7 @@ all the major operating systems
     
     ```
     
-    we could make the function take more that 1 parameter
+    - **we could make the function take more that 1 parameter**
     
     ```python
     def equa(x,y,z):
@@ -415,9 +504,67 @@ all the major operating systems
     result = equa(2,5,8)
     ```
     
-- **9.Classes**
+    - **Default value**
+        - we should put the default value at the end of parameters
     
-    The syntax for defining classes in Python is straightforward:
+    ```python
+    def calc_tax(salary,salary_raise=100):
+    	tax = 20/100 * salary +salary_raise
+    	return tax
+     # we could put new value in the parameter or keep it as default
+     my_tax = calc_tax(2000,200)
+    ```
+    
+    - args
+    
+    we could take more than 1 parameter without limit
+    
+    ```python
+    def my_sum(*args):
+    	print(args)
+    ```
+    
+    - **we could call the function by (named argument)**
+    
+    ```python
+    def sum(value1,value2,call):
+    	return value1+value2+call
+    
+    summation = sum(call = 6 ,value2 = 5,value1 = 8)
+    ```
+    
+    > **we couldn’t use positional argument with named / keyword argument**
+    > 
+    
+    except with **kargs**
+    
+    ```python
+    # we could use unlimited keyword / named arguments
+    def my_sum(x,y,**kwargs):
+    	print(x)
+    	print(y)
+    	print(kwargs)
+    	
+    my_sum(x= 5,y = 7 ,name = "ali",l=9)
+    ```
+    
+    - and we could use args and keyword args together
+    
+    ```python
+    def my_sum(x,y,*args,**kwargs):
+    	print(x)
+    	print(y)
+    	print(args)
+    	print(kwargs)
+    	
+    my_sum(5,6,7,8,9,10,11,name = "ali",l=9)
+    ```
+    
+- **9. Classes**
+    
+    **The syntax for defining classes in Python is straightforward:**
+    
+    - initialization to the class
     
     ```python
     # initialize class 
@@ -442,12 +589,90 @@ all the major operating systems
     # MOHEY
     ```
     
+- **10. Scope**
+    
+    ## **Lexical Scope**
+    
+    - there are difference between global and local scope
+    
+    ```python
+    # the variable on global scope
+    name = "Mohey"
+    
+    def my_func():
+    	name = "Ali"
+    	print(name)
+    	# this will print the name in the internal scope
+    
+    my_func()
+    print(name)
+    # this will print the global variable "Mohey"
+    ```
+    
+    ## **Global Variable**
+    
+    - we could initialize global value that we could access
+    
+    ```python
+    name = "mega"
+    
+    def my_name():
+    	global name = "mohey"
+    	print(name) # mohey
+    print(name) # mohey 
+    ```
+    
+    - we could access the parent’s variable
+    
+    ```python
+    name = "mega"
+    
+    def my_name():
+    	global name
+    	name = "mohey"
+    	print(name) # mohey
+    print(name) # mohey
+    ```
+    
+    - any mutable variable we could access from any scope
+    
+    ```python
+    my_list =[]
+    
+    def my_func():
+    	my_list.append("Mega")
+    	print(my_list) #["Mega"]
+    
+    print(my_list) #["Mega"]
+    ```
+    
+- **11. Binary conditions**
+    - we could return the value considering to And, OR
+    
+    ```python
+    daf calc(salary):
+    	tax = 20/100*salary
+    	return tax and tax/2
+    	if (tax/2) is true value the condition will back with last element 
+    	
+    ```
+    
+- **12. Multi-assignment**
+    
+    we could access the list in different ways
+    
+    ```python
+    z, *x,y =[1,2,3,4,5,6]
+    # z = 1
+    # y = 6
+    # x = [2,3,4,5]
+    ```
+    
 
 ---
 
 > The Python community’s philosophy is contained in “The Zen of Python” by Tim Peters. You can access this brief set of principles for writing good Python code by entering
 import this into your interpreter.
-> 
 
 ```python
 import this into
